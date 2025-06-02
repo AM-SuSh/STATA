@@ -143,7 +143,7 @@ def perform_clustering(stats_df):
     ]]
     scaler = StandardScaler()
     scaled_features = scaler.fit_transform(features)
-    kmeans = KMeans(n_clusters=5, random_state=42)
+    kmeans = KMeans(n_clusters=6, random_state=42)
     stats_df['cluster'] = kmeans.fit_predict(scaled_features)
     return stats_df
 
